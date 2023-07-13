@@ -1,10 +1,14 @@
 import domReady from '@roots/sage/client/dom-ready';
+import { createApp } from 'vue';
+import App from './vue/App.vue';
 
 /**
  * Application entrypoint
  */
 domReady(async () => {
-  // ...
+  const app = createApp(App);
+
+  app.mount('#app');
 });
 
 /**
