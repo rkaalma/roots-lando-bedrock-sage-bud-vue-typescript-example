@@ -1,4 +1,4 @@
-name: example
+name: example-web
 recipe: wordpress
 config:
   php: '8.1'
@@ -7,6 +7,8 @@ config:
   webroot: ./site/web
   database: mariadb
   xdebug: true
+  config:
+    php: .lando/php.ini
 proxy:
   appserver_nginx:
     - example.lndo.site # default
